@@ -32,8 +32,8 @@ window.addEventListener("load", function(){
     CT.k = 90;
 
     CT.opt = {
-        deffault: {
-            displayName: true
+        default: {
+            displayName: false
         },
 
         getParam: function() {
@@ -57,9 +57,9 @@ window.addEventListener("load", function(){
 
         setData: function() {
             var param = this.getParam();
-            for (var key in this.deffault) {
+            for (var key in this.default) {
                 if (!(key in param)) {
-                    param[key] = this.deffault[key];
+                    param[key] = this.default[key];
                 }
             }
             this.data = param;
